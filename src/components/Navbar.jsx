@@ -7,16 +7,16 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const activeLinkClass = "text-yellow-500"; // Define reusable active link class
-  const defaultLinkClass = "text-red-500 hover:text-yellow-500"; // Define reusable default link class
+  const activeLinkClass = "text-yellow-400"; // Define reusable active link class
+  const defaultLinkClass = "text-red-700 hover:text-yellow-500"; // Define reusable default link class
 
   return (
-    <nav className="bg-white fixed w-full z-20 top-0 start-0">
+    <nav className="bg-black bg-opacity-20 fixed w-full z-20 top-0 start-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <h2
           className="SanskritiFont bg-gradient-to-r bg-clip-text text-transparent 
-            from-red-500 to-yellow-500
-            animate-text font-extrabold text-5xl flex items-center space-x-3 rtl:space-x-reverse"
+          from-red-700 to-red-600
+          animate-text font-extrabold text-5xl flex items-center space-x-3 rtl:space-x-reverse"
         >
           Sanskriti
         </h2>
@@ -24,7 +24,7 @@ const Navbar = () => {
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-red-500 rounded-lg md:hidden focus:outline-none"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-red-700 rounded-lg md:hidden focus:outline-none"
           aria-controls="navbar-sticky"
           aria-expanded={isMenuOpen} // Conditional aria-expanded for accessibility
         >
@@ -69,28 +69,66 @@ const Navbar = () => {
           }`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-            {[
-              "Home",
-              "About",
-              "Performances",
-              "Timeline",
-              "Events",
-              "Gallery",
-              "Contact",
-            ].map((item, index) => (
-              <li key={index} className="ProgressFont cursor-pointer">
-                <a
-                  href="#"
-                  className={`${defaultLinkClass} px-3 py-2 rounded ${
-                    index === 0 && isMenuOpen ? activeLinkClass : ""
-                  }`} /* Apply activeLinkClass conditionally */
-                  aria-current={index === 0 ? "page" : null} // Set aria-current for active link
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded ${
+                  isMenuOpen ? activeLinkClass : ""
+                }`} /* Apply activeLinkClass conditionally */
+                aria-current="page" // Set aria-current for active link
+              >
+                Home
+              </a>
+            </li>
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded`}
+              >
+                About
+              </a>
+            </li>
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded`}
+              >
+                Performances
+              </a>
+            </li>
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded`}
+              >
+                Timeline
+              </a>
+            </li>
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded`}
+              >
+                Events
+              </a>
+            </li>
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded`}
+              >
+                Gallery
+              </a>
+            </li>
+            <li className="ProgressFont cursor-pointer">
+              <a
+                href="#"
+                className={`${defaultLinkClass} px-3 py-2 rounded`}
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </div>
