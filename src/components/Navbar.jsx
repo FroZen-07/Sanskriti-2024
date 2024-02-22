@@ -1,25 +1,49 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 90) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const activeLinkClass = "text-yellow-400"; // Define reusable active link class
   const defaultLinkClass = "text-red-700 hover:text-yellow-500"; // Define reusable default link class
 
   return (
-    <nav className="bg-black bg-opacity-20 fixed w-full z-20 top-0 start-0">
+    <nav
+      className={`fixed w-full z-20 ${
+        isScrolled ? "bg-amber-300 bg-opacity-70" : "bg-black bg-opacity-30"
+      }`}
+    >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <h2
-          className="SanskritiFont bg-gradient-to-r bg-clip-text text-transparent 
+        <a href="#home">
+          <h2
+            className="SanskritiFont bg-gradient-to-r bg-clip-text text-transparent 
           from-red-700 to-red-600
           animate-text font-extrabold text-5xl flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          Sanskriti
-        </h2>
+          >
+            Sanskriti
+          </h2>
+        </a>
 
         <button
           onClick={toggleMenu}
@@ -89,14 +113,14 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            {/* <li className="ProgressFont cursor-pointer">
+            <li className="ProgressFont cursor-pointer">
               <a
                 href="#performance"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Performances
               </a>
-            </li> */}
+            </li>
             <li className="ProgressFont cursor-pointer">
               <a
                 href="#timeline"
@@ -105,14 +129,14 @@ const Navbar = () => {
                 Timeline
               </a>
             </li>
-            {/* <li className="ProgressFont cursor-pointer">
+            <li className="ProgressFont cursor-pointer">
               <a
-                href="#event"
+                href="#events"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Events
               </a>
-            </li> */}
+            </li>
             <li className="ProgressFont cursor-pointer">
               <a
                 href="#gallery"

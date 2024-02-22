@@ -3,7 +3,7 @@ import Image from "next/image";
 import { urlFor } from "../../sanity";
 const Sponsors = ({ sponsors }) => {
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center'>
+    <div className='min-h-screen flex flex-col justify-center items-center py-20'>
       <h1
         className='SanskritiFont font-extrabold text-5xl md:text-8xl leading-none text-center py-10
       text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-500 select-none'>

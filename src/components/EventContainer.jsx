@@ -8,7 +8,7 @@ const EventContainer = ({ events }) => {
     //     <EventCard key={event._id} event={event} />
     //   ))}
     // </div>
-    <div className='grid md:grid-cols-4 grid-cols-2 w-full gap-8 px-6 md:pl-8'>
+    <div className='grid grid-cols-1 w-full gap-8 px-6 md:pl-8'>
       <ComingSoonCard />
     </div>
   );

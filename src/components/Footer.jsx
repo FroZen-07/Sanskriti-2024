@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='text-slate-800 py-2 text-sm md:text-base'>
+      <div className='text-black py-2 text-sm md:text-base font-bold'>
         Copyright © 2024 F.E.T.S.U. - All Rights Reserved.
       </div>
     </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 const Artist = ({ artist }) => {
   return (
     <div
-      className={`drop-shadow-xl relative hover:scale-105 transition-transform duration-200 ease-out border border-zinc-700 `}>
+      className={`drop-shadow-xl relative hover:scale-105 transition-transform duration-200 ease-out border border-red-700 `}>
       <Image
         src={urlFor(artist.mainImage).url()}
         alt={artist.name}
@@ -18,7 +18,7 @@ const Artist = ({ artist }) => {
       />
 
       {artist.artiststatus === "notrevealed" && (
-        <div className='absolute flex justify-center items-center text-zinc-300 capitalize inset-1/2 CaptainFont text-3xl md:text-6xl'>
+        <div className='absolute flex justify-center items-center text-red-700 capitalize inset-1/2 SanskritiFont text-3xl md:text-6xl'>
           revealing soon
         </div>
       )}

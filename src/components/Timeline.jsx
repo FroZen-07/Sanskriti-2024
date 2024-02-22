@@ -7,7 +7,7 @@ const EventTimeline = dynamic(() => import("../components/EventTimeline"), {
 });
 const Timeline = () => {
   return (
-    <div className='w-full min-h-screen md:p-24 flex flex-col  items-center overflow-hidden relative gap-2'>
+    <div className='w-full min-h-screen md:p-16 flex flex-col  items-center overflow-hidden relative gap-2'>
       <div>
         <h1
           className='SanskritiFont text-transparent font-extrabold text-5xl md:text-8xl leading-none text-center py-8

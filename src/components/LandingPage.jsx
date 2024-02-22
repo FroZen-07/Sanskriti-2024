@@ -6,7 +6,7 @@ const LandingPage = () => {
       <div className="absolute inset-0 overflow-hidden">
       <div className="w-full h-full bg-cover bg-center relative" style={{backgroundImage: 'url("/assets/sanskriti-image.jpg")'}}>
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90 md:opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black to-black opacity-70 md:opacity-50"></div>
         </div>
       </div>
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
