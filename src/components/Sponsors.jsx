@@ -7,7 +7,7 @@ const Sponsors = ({ sponsors }) => {
       <h1
         className='SanskritiFont font-extrabold text-5xl md:text-8xl leading-none text-center py-10
       text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-500 select-none'>
-        : past associate sponsors :
+         past associate sponsors 
       </h1>
       <div className='masonry-sponsors-sm md:masonry-sponsors-md px-8 md:px-4 py-4 '>
         {sponsors.map((sponsor) => (

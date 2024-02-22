@@ -13,7 +13,7 @@ const LandingPage = () => {
         <p className="ProgressFont text-left text-yellow-400 text-2xl md:text-4xl leading-none">
           F.E.T.S.U. presents
         </p>
-        <p className="SanskritiFont leading-none bg-gradient-to-r bg-clip-text text-transparent from-yellow-600 via-red-700 to-red-800 animate-text font-extrabold text-[20vw] md:text-[18vw] z-10 ">
+        <p className="SanskritiFont leading-none bg-gradient-to-r bg-clip-text text-transparent from-yellow-600 via-red-600 to-red-800 animate-text font-extrabold text-[20vw] md:text-[18vw] z-10 ">
           Sanskriti <span className="tracking- text-[8vw] -ml-4">2024</span>
         </p>
         <p className="SanskritiFont text-yellow-400 font-extrabold text-3xl md:text-8xl leading-none">

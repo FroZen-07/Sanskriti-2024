@@ -65,7 +65,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: medium !important;
-  background: linear-gradient(to right, #F8D63D 0%, #FAE37A 100%);
+  background: linear-gradient(to right, #F59E0B 0%, #ffe082 100%);
   min-height: 100%;
   display: grid;
   grid:auto / 1em fr 1em;
