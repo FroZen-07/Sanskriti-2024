@@ -72,7 +72,7 @@ const Navbar = () => {
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#home"
                 className={`${defaultLinkClass} px-3 py-2 rounded ${
                   isMenuOpen ? activeLinkClass : ""
                 }`} /* Apply activeLinkClass conditionally */
@@ -83,39 +83,39 @@ const Navbar = () => {
             </li>
             <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#about"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 About
               </a>
             </li>
-            <li className="ProgressFont cursor-pointer">
+            {/* <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#performance"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Performances
               </a>
-            </li>
+            </li> */}
             <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#timeline"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Timeline
               </a>
             </li>
-            <li className="ProgressFont cursor-pointer">
+            {/* <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#event"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Events
               </a>
-            </li>
+            </li> */}
             <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#gallery"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Gallery
@@ -123,7 +123,7 @@ const Navbar = () => {
             </li>
             <li className="ProgressFont cursor-pointer">
               <a
-                href="#"
+                href="#contact"
                 className={`${defaultLinkClass} px-3 py-2 rounded`}
               >
                 Contact
